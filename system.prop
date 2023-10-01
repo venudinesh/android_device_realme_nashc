@@ -87,3 +87,8 @@ zygote.critical_window.minute=10
 
 # Logcat
 persist.log.tag.gralloc4=S
+
+# Spark
+ro.spark.maintainer=Ereh
+ro.spark.device.name=Realme 8
+ro.spark.maintainer.username=Eren_Yeager
