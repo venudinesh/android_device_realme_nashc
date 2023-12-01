@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/realme/nashc/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common RisingOS stuff.
+$(call inherit-product, vendor/rising/config/rising.mk)
 
 # Inherit some RisingOSS stuff.
 RISING_CHIPSET := G95
@@ -31,8 +31,12 @@ TARGET_CORE_GMS_EXTRAS := true
 TARGET_USE_PIXEL_FINGERPRINT := false
 TARGET_EXCLUDES_AUDIOFX := true
 TARGET_BUILD_APERTURE_CAMERA := true
+INLINE_KERNEL_BUILDING := true
+TARGET_ENABLE_PIXEL_FEATURES := true
+TARGET_PREBUILT_PIXEL_LAUNCHER := false
+TARGET_PREBUILT_SOUND_MODEL := true
 
-PRODUCT_NAME := lineage_nashc
+PRODUCT_NAME := rising_nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := Realme
