@@ -13,9 +13,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, device/realme/nashc/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_nashc
+#octavi vibes
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_PIXEL_CHARGER := true
+TARGET_WANTS_FOD_ANIMATIONS=true
+EXTRA_UDFPS_ANIMATIONS := true
+
+# UnOfficial
+OCTAVI_BUILD_TYPE := Unofficial
+OCTAVI_MAINTAINER := Ereh
+
+# Gapps Build
+WITH_GAPPS := true
+
+PRODUCT_NAME := octavi_nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := Realme

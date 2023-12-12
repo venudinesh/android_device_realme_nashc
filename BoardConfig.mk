@@ -69,7 +69,8 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/realme/mt6785
 TARGET_KERNEL_CONFIG := lineage-nashc_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r450784d
+TARGET_KERNEL_CLANG_VERSION := r450784e
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r450784e
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
@@ -188,7 +189,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest_odm.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/framework_compatibility_matrix.xml
+    $(DEVICE_PATH)/framework_compatibility_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_SKUS += nfc
 DEVICE_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
